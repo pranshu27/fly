@@ -1,0 +1,10 @@
+MinIO Object Storage Server
+Copyright: 2015-2025 MinIO, Inc.
+License: GNU AGPLv3 - https://www.gnu.org/licenses/agpl-3.0.html
+Version: RELEASE.2025-03-12T18-04-18Z (go1.24.1 darwin/arm64)
+
+API: http://192.168.0.175:9000  http://127.0.0.1:9000 
+WebUI: http://192.168.0.175:59700 http://127.0.0.1:59700                
+
+Docs: https://docs.min.io
+WARN: Detected default credentials 'minioadmin:minioadmin', we recommend that you change these values with 'MINIO_ROOT_USER' and 'MINIO_ROOT_PASSWORD' environment variables
