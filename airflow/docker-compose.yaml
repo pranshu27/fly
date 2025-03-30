@@ -1,0 +1,127 @@
+version: '3.7'
+services:
+  mariadb:
+    image: mariadb:10.6
+    environment:
+      MYSQL_USER: airflow
+      MYSQL_PASSWORD: airflow
+      MYSQL_DATABASE: airflow
+      MYSQL_ROOT_PASSWORD: root # Change this for production!
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    ports:
+      - "3306:3306" # Optional, for host access
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-uairflow", "-pairflow"]
+      interval: 5s
+      retries: 5
+    restart: always
+
+  redis:
+    image: redis:6.2
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 30s
+      retries: 5
+    restart: always
+
+  airflow-webserver:
+    image: apache/airflow:2.8.2 #or the version you want
+    command: webserver
+    restart: always
+    build:
+      context: .
+    depends_on:
+      mariadb:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+    environment:
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: mysql+pymysql://airflow:airflow@mariadb/airflow
+      AIRFLOW__CELERY__RESULT_BACKEND: db+mysql://airflow:airflow@mariadb/airflow
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+      AIRFLOW__CORE__FERNET_KEY: SNnc9tMd3y7nIIzEKzqWZmt8vGhIEY_g4kBqs5TVy50= # Generate and replace this!
+      AIRFLOW__USERS__ADMIN_PASSWORD: airflow
+      AIRFLOW__USERS__ADMIN_USERNAME: airflow
+      _PIP_ADDITIONAL_REQUIREMENTS: pymysql
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    healthcheck:
+      test: ["CMD-SHELL", "airflow webserver --help"]
+      interval: 30s
+      timeout: 30s
+      retries: 3
+
+  airflow-scheduler:
+    image: apache/airflow:2.8.2
+    command: scheduler
+    restart: always
+    build:
+      context: .
+    depends_on:
+      mariadb:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+    environment:
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: mysql+pymysql://airflow:airflow@mariadb/airflow
+      AIRFLOW__CELERY__RESULT_BACKEND: db+mysql://airflow:airflow@mariadb/airflow
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+      AIRFLOW__CORE__FERNET_KEY: SNnc9tMd3y7nIIzEKzqWZmt8vGhIEY_g4kBqs5TVy50=
+      _PIP_ADDITIONAL_REQUIREMENTS: pymysql
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+
+  airflow-worker:
+    image: apache/airflow:2.8.2
+    command: worker
+    restart: always
+    build:
+      context: .
+    depends_on:
+      mariadb:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+    environment:
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: mysql+pymysql://airflow:airflow@mariadb/airflow
+      AIRFLOW__CELERY__RESULT_BACKEND: db+mysql://airflow:airflow@mariadb/airflow
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+      AIRFLOW__CORE__FERNET_KEY: SNnc9tMd3y7nIIzEKzqWZmt8vGhIEY_g4kBqs5TVy50=
+      _PIP_ADDITIONAL_REQUIREMENTS: pymysql
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+
+  airflow-init:
+    image: apache/airflow:2.8.2
+    command: db migrate
+    build:
+      context: .
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: mysql+pymysql://airflow:airflow@mariadb/airflow
+      _PIP_ADDITIONAL_REQUIREMENTS: pymysql
+volumes:
+  mariadb-data:
