@@ -1,0 +1,57 @@
+[2025-03-30T11:12:52.791+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: inout_data_ingestion.create_table scheduled__2024-10-06T10:30:00+00:00 [queued]>
+[2025-03-30T11:12:52.811+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: inout_data_ingestion.create_table scheduled__2024-10-06T10:30:00+00:00 [queued]>
+[2025-03-30T11:12:52.813+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2025-03-30T11:12:52.836+0000] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): create_table> on 2024-10-06 10:30:00+00:00
+[2025-03-30T11:12:52.841+0000] {standard_task_runner.py:60} INFO - Started process 1524 to run task
+[2025-03-30T11:12:52.849+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'inout_data_ingestion', 'create_table', 'scheduled__2024-10-06T10:30:00+00:00', '--job-id', '736', '--raw', '--subdir', 'DAGS_FOLDER/inout_data.py', '--cfg-path', '/tmp/tmp7wrs63gc']
+[2025-03-30T11:12:52.850+0000] {standard_task_runner.py:88} INFO - Job 736: Subtask create_table
+[2025-03-30T11:12:52.867+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-03-30T11:12:52.906+0000] {task_command.py:423} INFO - Running <TaskInstance: inout_data_ingestion.create_table scheduled__2024-10-06T10:30:00+00:00 [running]> on host ff9d64b065e6
+[2025-03-30T11:12:53.004+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='inout_data_ingestion' AIRFLOW_CTX_TASK_ID='create_table' AIRFLOW_CTX_EXECUTION_DATE='2024-10-06T10:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-06T10:30:00+00:00'
+[2025-03-30T11:12:53.011+0000] {inout_data.py:42} INFO - Successfully connected to MariaDB: INOUT on mariadb:3306
+[2025-03-30T11:12:53.012+0000] {inout_data.py:124} INFO - Table emp_inout_rec created (if it didn't exist).
+[2025-03-30T11:12:53.013+0000] {inout_data.py:78} INFO - MariaDB connection closed.
+[2025-03-30T11:12:53.013+0000] {python.py:202} INFO - Done. Returned value was: None
+[2025-03-30T11:12:53.021+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=inout_data_ingestion, task_id=create_table, execution_date=20241006T103000, start_date=20250330T111252, end_date=20250330T111253
+[2025-03-30T11:12:53.066+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-03-30T11:12:53.098+0000] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-30T11:19:33.217+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: inout_data_ingestion.create_table scheduled__2024-10-06T10:30:00+00:00 [queued]>
+[2025-03-30T11:19:33.245+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: inout_data_ingestion.create_table scheduled__2024-10-06T10:30:00+00:00 [queued]>
+[2025-03-30T11:19:33.252+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2025-03-30T11:19:33.273+0000] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): create_table> on 2024-10-06 10:30:00+00:00
+[2025-03-30T11:19:33.289+0000] {standard_task_runner.py:60} INFO - Started process 3378 to run task
+[2025-03-30T11:19:33.299+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'inout_data_ingestion', 'create_table', 'scheduled__2024-10-06T10:30:00+00:00', '--job-id', '1663', '--raw', '--subdir', 'DAGS_FOLDER/inout_data.py', '--cfg-path', '/tmp/tmpcskvq5zy']
+[2025-03-30T11:19:33.308+0000] {standard_task_runner.py:88} INFO - Job 1663: Subtask create_table
+[2025-03-30T11:19:33.334+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-03-30T11:19:33.411+0000] {task_command.py:423} INFO - Running <TaskInstance: inout_data_ingestion.create_table scheduled__2024-10-06T10:30:00+00:00 [running]> on host ff9d64b065e6
+[2025-03-30T11:19:33.555+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='inout_data_ingestion' AIRFLOW_CTX_TASK_ID='create_table' AIRFLOW_CTX_EXECUTION_DATE='2024-10-06T10:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-06T10:30:00+00:00'
+[2025-03-30T11:19:33.574+0000] {inout_data.py:42} INFO - Successfully connected to MariaDB: INOUT on mariadb:3306
+[2025-03-30T11:19:33.576+0000] {inout_data.py:117} INFO - Table emp_inout_rec created (if it didn't exist).
+[2025-03-30T11:19:33.583+0000] {inout_data.py:78} INFO - MariaDB connection closed.
+[2025-03-30T11:19:33.585+0000] {python.py:202} INFO - Done. Returned value was: None
+[2025-03-30T11:19:33.644+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=inout_data_ingestion, task_id=create_table, execution_date=20241006T103000, start_date=20250330T111933, end_date=20250330T111933
+[2025-03-30T11:19:33.750+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-03-30T11:19:33.848+0000] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-30T11:31:38.238+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: inout_data_ingestion.create_table scheduled__2024-10-06T10:30:00+00:00 [queued]>
+[2025-03-30T11:31:38.280+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: inout_data_ingestion.create_table scheduled__2024-10-06T10:30:00+00:00 [queued]>
+[2025-03-30T11:31:38.283+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2025-03-30T11:31:38.312+0000] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): create_table> on 2024-10-06 10:30:00+00:00
+[2025-03-30T11:31:38.318+0000] {standard_task_runner.py:60} INFO - Started process 5295 to run task
+[2025-03-30T11:31:38.323+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'inout_data_ingestion', 'create_table', 'scheduled__2024-10-06T10:30:00+00:00', '--job-id', '2622', '--raw', '--subdir', 'DAGS_FOLDER/inout_data.py', '--cfg-path', '/tmp/tmph27hof4j']
+[2025-03-30T11:31:38.325+0000] {standard_task_runner.py:88} INFO - Job 2622: Subtask create_table
+[2025-03-30T11:31:38.339+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-03-30T11:31:38.372+0000] {task_command.py:423} INFO - Running <TaskInstance: inout_data_ingestion.create_table scheduled__2024-10-06T10:30:00+00:00 [running]> on host ff9d64b065e6
+[2025-03-30T11:31:38.672+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='inout_data_ingestion' AIRFLOW_CTX_TASK_ID='create_table' AIRFLOW_CTX_EXECUTION_DATE='2024-10-06T10:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-06T10:30:00+00:00'
+[2025-03-30T11:31:38.703+0000] {logging_mixin.py:188} INFO - Successfully connected to MariaDB: INOUT on mariadb:3306
+[2025-03-30T11:31:38.704+0000] {inout_data.py:46} INFO - Table emp_inout_rec created (if it didn't exist).
+[2025-03-30T11:31:38.707+0000] {logging_mixin.py:188} INFO - MariaDB connection closed.
+[2025-03-30T11:31:38.709+0000] {python.py:202} INFO - Done. Returned value was: None
+[2025-03-30T11:31:38.724+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=inout_data_ingestion, task_id=create_table, execution_date=20241006T103000, start_date=20250330T113138, end_date=20250330T113138
+[2025-03-30T11:31:38.782+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-03-30T11:31:38.832+0000] {taskinstance.py:3309} INFO - 1 downstream tasks scheduled from follow-on schedule check

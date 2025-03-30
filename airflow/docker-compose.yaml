@@ -48,7 +48,6 @@ services:
       AIRFLOW__CORE__FERNET_KEY: SNnc9tMd3y7nIIzEKzqWZmt8vGhIEY_g4kBqs5TVy50= # Generate and replace this!
       AIRFLOW__USERS__ADMIN_PASSWORD: airflow
       AIRFLOW__USERS__ADMIN_USERNAME: airflow
-      _PIP_ADDITIONAL_REQUIREMENTS: pymysql
     ports:
       - "8080:8080"
     volumes:
@@ -80,7 +79,6 @@ services:
       AIRFLOW__CELERY__RESULT_BACKEND: db+mysql://airflow:airflow@mariadb/airflow
       AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
       AIRFLOW__CORE__FERNET_KEY: SNnc9tMd3y7nIIzEKzqWZmt8vGhIEY_g4kBqs5TVy50=
-      _PIP_ADDITIONAL_REQUIREMENTS: pymysql
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
@@ -88,7 +86,7 @@ services:
 
   airflow-worker:
     image: apache/airflow:2.8.2
-    command: worker
+    command: celery worker
     restart: always
     build:
       context: .
@@ -105,7 +103,6 @@ services:
       AIRFLOW__CELERY__RESULT_BACKEND: db+mysql://airflow:airflow@mariadb/airflow
       AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
       AIRFLOW__CORE__FERNET_KEY: SNnc9tMd3y7nIIzEKzqWZmt8vGhIEY_g4kBqs5TVy50=
-      _PIP_ADDITIONAL_REQUIREMENTS: pymysql
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
@@ -121,6 +118,5 @@ services:
         condition: service_healthy
     environment:
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: mysql+pymysql://airflow:airflow@mariadb/airflow
-      _PIP_ADDITIONAL_REQUIREMENTS: pymysql
 volumes:
   mariadb-data:

@@ -1,0 +1,155 @@
+[2025-03-30T11:10:33.268+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-02T08:00:00+00:00 [queued]>
+[2025-03-30T11:10:33.277+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-02T08:00:00+00:00 [queued]>
+[2025-03-30T11:10:33.278+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2025-03-30T11:10:33.291+0000] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): ingest_dummy_data> on 2024-10-02 08:00:00+00:00
+[2025-03-30T11:10:33.295+0000] {standard_task_runner.py:60} INFO - Started process 742 to run task
+[2025-03-30T11:10:33.299+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'inout_data_ingestion', 'ingest_dummy_data', 'scheduled__2024-10-02T08:00:00+00:00', '--job-id', '346', '--raw', '--subdir', 'DAGS_FOLDER/inout_data.py', '--cfg-path', '/tmp/tmpg7qarum2']
+[2025-03-30T11:10:33.300+0000] {standard_task_runner.py:88} INFO - Job 346: Subtask ingest_dummy_data
+[2025-03-30T11:10:33.308+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-03-30T11:10:33.327+0000] {task_command.py:423} INFO - Running <TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-02T08:00:00+00:00 [running]> on host ff9d64b065e6
+[2025-03-30T11:10:33.371+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='inout_data_ingestion' AIRFLOW_CTX_TASK_ID='ingest_dummy_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-02T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-02T08:00:00+00:00'
+[2025-03-30T11:10:33.373+0000] {inout_data.py:42} INFO - Successfully connected to MariaDB: INOUT on mariadb:3306
+[2025-03-30T11:10:33.374+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:10:33-8409' for key 'PRIMARY'")
+[2025-03-30T11:10:33.375+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:10:33-8409' for key 'PRIMARY'")
+[2025-03-30T11:10:33.375+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:10:33-8409' for key 'PRIMARY'")
+[2025-03-30T11:10:33.375+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:10:33-8409' for key 'PRIMARY'")
+[2025-03-30T11:10:33.376+0000] {inout_data.py:159} INFO - Ingested 5 rows of dummy data.
+[2025-03-30T11:10:33.376+0000] {inout_data.py:78} INFO - MariaDB connection closed.
+[2025-03-30T11:10:33.376+0000] {python.py:202} INFO - Done. Returned value was: None
+[2025-03-30T11:10:33.381+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=inout_data_ingestion, task_id=ingest_dummy_data, execution_date=20241002T080000, start_date=20250330T111033, end_date=20250330T111033
+[2025-03-30T11:10:33.399+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-03-30T11:10:33.410+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-30T11:17:12.106+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-02T08:00:00+00:00 [queued]>
+[2025-03-30T11:17:12.133+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-02T08:00:00+00:00 [queued]>
+[2025-03-30T11:17:12.134+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2025-03-30T11:17:12.175+0000] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): ingest_dummy_data> on 2024-10-02 08:00:00+00:00
+[2025-03-30T11:17:12.186+0000] {standard_task_runner.py:60} INFO - Started process 2606 to run task
+[2025-03-30T11:17:12.206+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'inout_data_ingestion', 'ingest_dummy_data', 'scheduled__2024-10-02T08:00:00+00:00', '--job-id', '1277', '--raw', '--subdir', 'DAGS_FOLDER/inout_data.py', '--cfg-path', '/tmp/tmp1nyo_xjv']
+[2025-03-30T11:17:12.216+0000] {standard_task_runner.py:88} INFO - Job 1277: Subtask ingest_dummy_data
+[2025-03-30T11:17:12.308+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-03-30T11:17:12.417+0000] {task_command.py:423} INFO - Running <TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-02T08:00:00+00:00 [running]> on host ff9d64b065e6
+[2025-03-30T11:17:12.534+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='inout_data_ingestion' AIRFLOW_CTX_TASK_ID='ingest_dummy_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-02T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-02T08:00:00+00:00'
+[2025-03-30T11:17:12.545+0000] {inout_data.py:42} INFO - Successfully connected to MariaDB: INOUT on mariadb:3306
+[2025-03-30T11:17:12.552+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:17:12-7262' for key 'PRIMARY'")
+[2025-03-30T11:17:12.553+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:17:12-7262' for key 'PRIMARY'")
+[2025-03-30T11:17:12.555+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:17:12-7262' for key 'PRIMARY'")
+[2025-03-30T11:17:12.557+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:17:12-7262' for key 'PRIMARY'")
+[2025-03-30T11:17:12.559+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:17:12-7262' for key 'PRIMARY'")
+[2025-03-30T11:17:12.563+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:17:12-7262' for key 'PRIMARY'")
+[2025-03-30T11:17:12.564+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:17:12-7262' for key 'PRIMARY'")
+[2025-03-30T11:17:12.566+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:17:12-7262' for key 'PRIMARY'")
+[2025-03-30T11:17:12.568+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:17:12-7262' for key 'PRIMARY'")
+[2025-03-30T11:17:12.571+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:17:12-7262' for key 'PRIMARY'")
+[2025-03-30T11:17:12.575+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:17:12-7262' for key 'PRIMARY'")
+[2025-03-30T11:17:12.578+0000] {inout_data.py:152} INFO - Ingested 12 rows of dummy data.
+[2025-03-30T11:17:12.580+0000] {inout_data.py:78} INFO - MariaDB connection closed.
+[2025-03-30T11:17:12.580+0000] {python.py:202} INFO - Done. Returned value was: None
+[2025-03-30T11:17:12.599+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=inout_data_ingestion, task_id=ingest_dummy_data, execution_date=20241002T080000, start_date=20250330T111712, end_date=20250330T111712
+[2025-03-30T11:17:12.660+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-03-30T11:17:12.737+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-30T11:29:39.025+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-02T08:00:00+00:00 [queued]>
+[2025-03-30T11:29:39.036+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-02T08:00:00+00:00 [queued]>
+[2025-03-30T11:29:39.038+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2025-03-30T11:29:39.057+0000] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): ingest_dummy_data> on 2024-10-02 08:00:00+00:00
+[2025-03-30T11:29:39.060+0000] {standard_task_runner.py:60} INFO - Started process 4525 to run task
+[2025-03-30T11:29:39.067+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'inout_data_ingestion', 'ingest_dummy_data', 'scheduled__2024-10-02T08:00:00+00:00', '--job-id', '2236', '--raw', '--subdir', 'DAGS_FOLDER/inout_data.py', '--cfg-path', '/tmp/tmpz32biobm']
+[2025-03-30T11:29:39.070+0000] {standard_task_runner.py:88} INFO - Job 2236: Subtask ingest_dummy_data
+[2025-03-30T11:29:39.087+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-03-30T11:29:39.132+0000] {task_command.py:423} INFO - Running <TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-02T08:00:00+00:00 [running]> on host ff9d64b065e6
+[2025-03-30T11:29:39.207+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='inout_data_ingestion' AIRFLOW_CTX_TASK_ID='ingest_dummy_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-02T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-02T08:00:00+00:00'
+[2025-03-30T11:29:39.214+0000] {logging_mixin.py:188} INFO - Successfully connected to MariaDB: INOUT on mariadb:3306
+[2025-03-30T11:29:39.216+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:29:39.217+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:29:39.220+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:29:39.224+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:29:39.225+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:29:39.225+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:29:39.227+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:29:39.227+0000] {inout_data.py:87} INFO - Ingested 7 rows of dummy data for 2024-10-02 08:00:00+00:00.
+[2025-03-30T11:29:39.228+0000] {logging_mixin.py:188} INFO - MariaDB connection closed.
+[2025-03-30T11:29:39.229+0000] {python.py:202} INFO - Done. Returned value was: None
+[2025-03-30T11:29:39.241+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=inout_data_ingestion, task_id=ingest_dummy_data, execution_date=20241002T080000, start_date=20250330T112939, end_date=20250330T112939
+[2025-03-30T11:29:39.290+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-03-30T11:29:39.318+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-30T11:34:33.362+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-02T08:00:00+00:00 [queued]>
+[2025-03-30T11:34:33.386+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-02T08:00:00+00:00 [queued]>
+[2025-03-30T11:34:33.387+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2025-03-30T11:34:33.406+0000] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): ingest_dummy_data> on 2024-10-02 08:00:00+00:00
+[2025-03-30T11:34:33.416+0000] {standard_task_runner.py:60} INFO - Started process 5984 to run task
+[2025-03-30T11:34:33.427+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'inout_data_ingestion', 'ingest_dummy_data', 'scheduled__2024-10-02T08:00:00+00:00', '--job-id', '2966', '--raw', '--subdir', 'DAGS_FOLDER/inout_data.py', '--cfg-path', '/tmp/tmpgepjda8k']
+[2025-03-30T11:34:33.429+0000] {standard_task_runner.py:88} INFO - Job 2966: Subtask ingest_dummy_data
+[2025-03-30T11:34:33.452+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-03-30T11:34:33.544+0000] {task_command.py:423} INFO - Running <TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-02T08:00:00+00:00 [running]> on host ff9d64b065e6
+[2025-03-30T11:34:33.687+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='inout_data_ingestion' AIRFLOW_CTX_TASK_ID='ingest_dummy_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-02T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-02T08:00:00+00:00'
+[2025-03-30T11:34:33.700+0000] {logging_mixin.py:188} INFO - Successfully connected to MariaDB: INOUT on mariadb:3306
+[2025-03-30T11:34:33.703+0000] {inout_data.py:83} INFO - {'ingested_time': datetime.datetime(2025, 3, 30, 11, 34, 33, 703097), 'timestamp': datetime.datetime(2024, 10, 2, 8, 12, tzinfo=datetime.timezone.utc), 'emp_id': 4275, 'employee_name': 'Employee13', 'factory': 'FactoryA', 'in_out': 'OUT', 'entrance': 'Main', 'door_number': '7', 'function': 'IT', 'division': 'AAPD', 'department': 'HRSD', 'section': '1'}
+[2025-03-30T11:34:33.704+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:34:33.705+0000] {inout_data.py:83} INFO - {'ingested_time': datetime.datetime(2025, 3, 30, 11, 34, 33, 705507), 'timestamp': datetime.datetime(2024, 10, 2, 8, 9, tzinfo=datetime.timezone.utc), 'emp_id': 3166, 'employee_name': 'Employee68', 'factory': 'FactoryB', 'in_out': 'OUT', 'entrance': 'Side', 'door_number': '2', 'function': 'IT', 'division': 'BSID', 'department': 'CAPD', 'section': '2'}
+[2025-03-30T11:34:33.709+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:34:33.712+0000] {inout_data.py:83} INFO - {'ingested_time': datetime.datetime(2025, 3, 30, 11, 34, 33, 712161), 'timestamp': datetime.datetime(2024, 10, 2, 8, 20, tzinfo=datetime.timezone.utc), 'emp_id': 1303, 'employee_name': 'Employee84', 'factory': 'FactoryB', 'in_out': 'IN', 'entrance': 'Side', 'door_number': '1', 'function': 'IT', 'division': 'AAPD', 'department': 'ML', 'section': '2'}
+[2025-03-30T11:34:33.713+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:34:33.714+0000] {inout_data.py:83} INFO - {'ingested_time': datetime.datetime(2025, 3, 30, 11, 34, 33, 714155), 'timestamp': datetime.datetime(2024, 10, 2, 8, 25, tzinfo=datetime.timezone.utc), 'emp_id': 2611, 'employee_name': 'Employee16', 'factory': 'FactoryA', 'in_out': 'IN', 'entrance': 'Main', 'door_number': '1', 'function': 'IT', 'division': 'BSID', 'department': 'CAPD', 'section': '2'}
+[2025-03-30T11:34:33.715+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:34:33.716+0000] {inout_data.py:83} INFO - {'ingested_time': datetime.datetime(2025, 3, 30, 11, 34, 33, 716477), 'timestamp': datetime.datetime(2024, 10, 2, 8, 28, tzinfo=datetime.timezone.utc), 'emp_id': 4924, 'employee_name': 'Employee1', 'factory': 'FactoryB', 'in_out': 'OUT', 'entrance': 'Main', 'door_number': '9', 'function': 'IT', 'division': 'BSID', 'department': 'HRSD', 'section': '2'}
+[2025-03-30T11:34:33.719+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:34:33.720+0000] {inout_data.py:83} INFO - {'ingested_time': datetime.datetime(2025, 3, 30, 11, 34, 33, 719996), 'timestamp': datetime.datetime(2024, 10, 2, 8, 0, tzinfo=datetime.timezone.utc), 'emp_id': 6396, 'employee_name': 'Employee33', 'factory': 'FactoryB', 'in_out': 'IN', 'entrance': 'Main', 'door_number': '2', 'function': 'IT', 'division': 'AAPD', 'department': 'CAPD', 'section': '2'}
+[2025-03-30T11:34:33.721+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:34:33.723+0000] {inout_data.py:83} INFO - {'ingested_time': datetime.datetime(2025, 3, 30, 11, 34, 33, 723323), 'timestamp': datetime.datetime(2024, 10, 2, 8, 25, tzinfo=datetime.timezone.utc), 'emp_id': 4623, 'employee_name': 'Employee63', 'factory': 'FactoryB', 'in_out': 'OUT', 'entrance': 'Side', 'door_number': '4', 'function': 'IT', 'division': 'AAPD', 'department': 'ML', 'section': '2'}
+[2025-03-30T11:34:33.727+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:34:33.729+0000] {inout_data.py:83} INFO - {'ingested_time': datetime.datetime(2025, 3, 30, 11, 34, 33, 728706), 'timestamp': datetime.datetime(2024, 10, 2, 8, 2, tzinfo=datetime.timezone.utc), 'emp_id': 4596, 'employee_name': 'Employee96', 'factory': 'FactoryB', 'in_out': 'OUT', 'entrance': 'Main', 'door_number': '3', 'function': 'IT', 'division': 'AAPD', 'department': 'ML', 'section': '2'}
+[2025-03-30T11:34:33.733+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:34:33.735+0000] {inout_data.py:83} INFO - {'ingested_time': datetime.datetime(2025, 3, 30, 11, 34, 33, 735295), 'timestamp': datetime.datetime(2024, 10, 2, 8, 22, tzinfo=datetime.timezone.utc), 'emp_id': 2533, 'employee_name': 'Employee58', 'factory': 'FactoryB', 'in_out': 'OUT', 'entrance': 'Side', 'door_number': '2', 'function': 'IT', 'division': 'BSID', 'department': 'HRSD', 'section': '2'}
+[2025-03-30T11:34:33.737+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:34:33.740+0000] {inout_data.py:83} INFO - {'ingested_time': datetime.datetime(2025, 3, 30, 11, 34, 33, 740687), 'timestamp': datetime.datetime(2024, 10, 2, 8, 17, tzinfo=datetime.timezone.utc), 'emp_id': 6538, 'employee_name': 'Employee70', 'factory': 'FactoryB', 'in_out': 'IN', 'entrance': 'Side', 'door_number': '10', 'function': 'IT', 'division': 'BSID', 'department': 'CAPD', 'section': '2'}
+[2025-03-30T11:34:33.742+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:34:33.744+0000] {inout_data.py:83} INFO - {'ingested_time': datetime.datetime(2025, 3, 30, 11, 34, 33, 744570), 'timestamp': datetime.datetime(2024, 10, 2, 8, 8, tzinfo=datetime.timezone.utc), 'emp_id': 6484, 'employee_name': 'Employee33', 'factory': 'FactoryB', 'in_out': 'OUT', 'entrance': 'Side', 'door_number': '6', 'function': 'IT', 'division': 'BSID', 'department': 'HRSD', 'section': '1'}
+[2025-03-30T11:34:33.746+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:34:33.747+0000] {inout_data.py:83} INFO - {'ingested_time': datetime.datetime(2025, 3, 30, 11, 34, 33, 747085), 'timestamp': datetime.datetime(2024, 10, 2, 8, 7, tzinfo=datetime.timezone.utc), 'emp_id': 8080, 'employee_name': 'Employee24', 'factory': 'FactoryB', 'in_out': 'OUT', 'entrance': 'Side', 'door_number': '5', 'function': 'IT', 'division': 'BSID', 'department': 'ML', 'section': '1'}
+[2025-03-30T11:34:33.749+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:34:33.755+0000] {inout_data.py:83} INFO - {'ingested_time': datetime.datetime(2025, 3, 30, 11, 34, 33, 754787), 'timestamp': datetime.datetime(2024, 10, 2, 8, 7, tzinfo=datetime.timezone.utc), 'emp_id': 4468, 'employee_name': 'Employee19', 'factory': 'FactoryA', 'in_out': 'OUT', 'entrance': 'Main', 'door_number': '1', 'function': 'IT', 'division': 'BSID', 'department': 'ML', 'section': '1'}
+[2025-03-30T11:34:33.756+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:34:33.758+0000] {inout_data.py:83} INFO - {'ingested_time': datetime.datetime(2025, 3, 30, 11, 34, 33, 758045), 'timestamp': datetime.datetime(2024, 10, 2, 8, 23, tzinfo=datetime.timezone.utc), 'emp_id': 7290, 'employee_name': 'Employee67', 'factory': 'FactoryB', 'in_out': 'OUT', 'entrance': 'Main', 'door_number': '1', 'function': 'IT', 'division': 'AAPD', 'department': 'ML', 'section': '2'}
+[2025-03-30T11:34:33.759+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:34:33.763+0000] {inout_data.py:88} INFO - Ingested 14 rows of dummy data for 2024-10-02 08:00:00+00:00.
+[2025-03-30T11:34:33.763+0000] {logging_mixin.py:188} INFO - MariaDB connection closed.
+[2025-03-30T11:34:33.764+0000] {python.py:202} INFO - Done. Returned value was: None
+[2025-03-30T11:34:33.793+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=inout_data_ingestion, task_id=ingest_dummy_data, execution_date=20241002T080000, start_date=20250330T113433, end_date=20250330T113433
+[2025-03-30T11:34:33.866+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-03-30T11:34:33.890+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-30T11:42:12.915+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-02T08:00:00+00:00 [queued]>
+[2025-03-30T11:42:12.925+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-02T08:00:00+00:00 [queued]>
+[2025-03-30T11:42:12.926+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2025-03-30T11:42:12.945+0000] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): ingest_dummy_data> on 2024-10-02 08:00:00+00:00
+[2025-03-30T11:42:12.949+0000] {standard_task_runner.py:60} INFO - Started process 7315 to run task
+[2025-03-30T11:42:12.958+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'inout_data_ingestion', 'ingest_dummy_data', 'scheduled__2024-10-02T08:00:00+00:00', '--job-id', '3632', '--raw', '--subdir', 'DAGS_FOLDER/inout_data.py', '--cfg-path', '/tmp/tmpqf7kfny2']
+[2025-03-30T11:42:12.961+0000] {standard_task_runner.py:88} INFO - Job 3632: Subtask ingest_dummy_data
+[2025-03-30T11:42:12.976+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-03-30T11:42:13.006+0000] {task_command.py:423} INFO - Running <TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-02T08:00:00+00:00 [running]> on host ff9d64b065e6
+[2025-03-30T11:42:13.050+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='inout_data_ingestion' AIRFLOW_CTX_TASK_ID='ingest_dummy_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-02T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-02T08:00:00+00:00'
+[2025-03-30T11:42:13.051+0000] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/inout_data.py", line 77, in ingest_dummy_data
+    dao = MariaDBDAO(CONFIG_FILE, CONN_ID)
+TypeError: MariaDBDAO() takes no arguments
+[2025-03-30T11:42:13.056+0000] {taskinstance.py:1149} INFO - Marking task as UP_FOR_RETRY. dag_id=inout_data_ingestion, task_id=ingest_dummy_data, execution_date=20241002T080000, start_date=20250330T114212, end_date=20250330T114213
+[2025-03-30T11:42:13.063+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 3632 for task ingest_dummy_data (MariaDBDAO() takes no arguments; 7315)
+[2025-03-30T11:42:13.094+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-03-30T11:42:13.110+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

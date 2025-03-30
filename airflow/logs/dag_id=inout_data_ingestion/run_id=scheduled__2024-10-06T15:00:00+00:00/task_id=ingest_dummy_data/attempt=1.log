@@ -1,0 +1,67 @@
+[2025-03-30T11:13:01.854+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-06T15:00:00+00:00 [queued]>
+[2025-03-30T11:13:01.875+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-06T15:00:00+00:00 [queued]>
+[2025-03-30T11:13:01.876+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2025-03-30T11:13:01.911+0000] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): ingest_dummy_data> on 2024-10-06 15:00:00+00:00
+[2025-03-30T11:13:01.925+0000] {standard_task_runner.py:60} INFO - Started process 1578 to run task
+[2025-03-30T11:13:01.938+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'inout_data_ingestion', 'ingest_dummy_data', 'scheduled__2024-10-06T15:00:00+00:00', '--job-id', '762', '--raw', '--subdir', 'DAGS_FOLDER/inout_data.py', '--cfg-path', '/tmp/tmps8l381na']
+[2025-03-30T11:13:01.949+0000] {standard_task_runner.py:88} INFO - Job 762: Subtask ingest_dummy_data
+[2025-03-30T11:13:01.970+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-03-30T11:13:02.061+0000] {task_command.py:423} INFO - Running <TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-06T15:00:00+00:00 [running]> on host ff9d64b065e6
+[2025-03-30T11:13:02.355+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='inout_data_ingestion' AIRFLOW_CTX_TASK_ID='ingest_dummy_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-06T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-06T15:00:00+00:00'
+[2025-03-30T11:13:02.371+0000] {inout_data.py:42} INFO - Successfully connected to MariaDB: INOUT on mariadb:3306
+[2025-03-30T11:13:02.386+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:13:02-3440' for key 'PRIMARY'")
+[2025-03-30T11:13:02.390+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:13:02-3440' for key 'PRIMARY'")
+[2025-03-30T11:13:02.392+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:13:02-3440' for key 'PRIMARY'")
+[2025-03-30T11:13:02.396+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:13:02-3440' for key 'PRIMARY'")
+[2025-03-30T11:13:02.398+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:13:02-3440' for key 'PRIMARY'")
+[2025-03-30T11:13:02.401+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:13:02-3440' for key 'PRIMARY'")
+[2025-03-30T11:13:02.403+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:13:02-3440' for key 'PRIMARY'")
+[2025-03-30T11:13:02.406+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:13:02-3440' for key 'PRIMARY'")
+[2025-03-30T11:13:02.409+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:13:02-3440' for key 'PRIMARY'")
+[2025-03-30T11:13:02.412+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:13:02-3440' for key 'PRIMARY'")
+[2025-03-30T11:13:02.415+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:13:02-3440' for key 'PRIMARY'")
+[2025-03-30T11:13:02.419+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:13:02-3440' for key 'PRIMARY'")
+[2025-03-30T11:13:02.423+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:13:02-3440' for key 'PRIMARY'")
+[2025-03-30T11:13:02.496+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:13:02-3440' for key 'PRIMARY'")
+[2025-03-30T11:13:02.499+0000] {inout_data.py:159} INFO - Ingested 15 rows of dummy data.
+[2025-03-30T11:13:02.515+0000] {inout_data.py:78} INFO - MariaDB connection closed.
+[2025-03-30T11:13:02.519+0000] {python.py:202} INFO - Done. Returned value was: None
+[2025-03-30T11:13:02.549+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=inout_data_ingestion, task_id=ingest_dummy_data, execution_date=20241006T150000, start_date=20250330T111301, end_date=20250330T111302
+[2025-03-30T11:13:02.616+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-03-30T11:13:02.655+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-30T11:19:43.229+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-06T15:00:00+00:00 [queued]>
+[2025-03-30T11:19:43.248+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-06T15:00:00+00:00 [queued]>
+[2025-03-30T11:19:43.250+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2025-03-30T11:19:43.275+0000] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): ingest_dummy_data> on 2024-10-06 15:00:00+00:00
+[2025-03-30T11:19:43.290+0000] {standard_task_runner.py:60} INFO - Started process 3427 to run task
+[2025-03-30T11:19:43.301+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'inout_data_ingestion', 'ingest_dummy_data', 'scheduled__2024-10-06T15:00:00+00:00', '--job-id', '1687', '--raw', '--subdir', 'DAGS_FOLDER/inout_data.py', '--cfg-path', '/tmp/tmp2cwqus2a']
+[2025-03-30T11:19:43.304+0000] {standard_task_runner.py:88} INFO - Job 1687: Subtask ingest_dummy_data
+[2025-03-30T11:19:43.340+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-03-30T11:19:43.397+0000] {task_command.py:423} INFO - Running <TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-06T15:00:00+00:00 [running]> on host ff9d64b065e6
+[2025-03-30T11:19:43.801+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='inout_data_ingestion' AIRFLOW_CTX_TASK_ID='ingest_dummy_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-06T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-06T15:00:00+00:00'
+[2025-03-30T11:19:43.846+0000] {inout_data.py:42} INFO - Successfully connected to MariaDB: INOUT on mariadb:3306
+[2025-03-30T11:19:43.860+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:43-1346' for key 'PRIMARY'")
+[2025-03-30T11:19:43.861+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:43-1346' for key 'PRIMARY'")
+[2025-03-30T11:19:43.868+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:43-1346' for key 'PRIMARY'")
+[2025-03-30T11:19:43.875+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:43-1346' for key 'PRIMARY'")
+[2025-03-30T11:19:43.877+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:43-1346' for key 'PRIMARY'")
+[2025-03-30T11:19:43.880+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:43-1346' for key 'PRIMARY'")
+[2025-03-30T11:19:43.883+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:43-1346' for key 'PRIMARY'")
+[2025-03-30T11:19:43.887+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:43-1346' for key 'PRIMARY'")
+[2025-03-30T11:19:43.895+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:43-1346' for key 'PRIMARY'")
+[2025-03-30T11:19:43.900+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:43-1346' for key 'PRIMARY'")
+[2025-03-30T11:19:43.903+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:43-1346' for key 'PRIMARY'")
+[2025-03-30T11:19:43.908+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:43-1346' for key 'PRIMARY'")
+[2025-03-30T11:19:43.913+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:43-1346' for key 'PRIMARY'")
+[2025-03-30T11:19:43.921+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:43-1346' for key 'PRIMARY'")
+[2025-03-30T11:19:43.949+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:43-1346' for key 'PRIMARY'")
+[2025-03-30T11:19:43.954+0000] {inout_data.py:152} INFO - Ingested 16 rows of dummy data.
+[2025-03-30T11:19:43.955+0000] {inout_data.py:78} INFO - MariaDB connection closed.
+[2025-03-30T11:19:43.957+0000] {python.py:202} INFO - Done. Returned value was: None
+[2025-03-30T11:19:44.014+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=inout_data_ingestion, task_id=ingest_dummy_data, execution_date=20241006T150000, start_date=20250330T111943, end_date=20250330T111944
+[2025-03-30T11:19:44.108+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-03-30T11:19:44.197+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

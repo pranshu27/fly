@@ -1,0 +1,1 @@
+[2025-03-30T11:14:03.226+0000] {scheduler_job_runner.py:781} ERROR - Executor reports task instance <TaskInstance: inout_data_ingestion.create_table scheduled__2024-10-08T10:00:00+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

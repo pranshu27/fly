@@ -1,0 +1,77 @@
+[2025-03-30T11:12:21.549+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-05T12:00:00+00:00 [queued]>
+[2025-03-30T11:12:21.556+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-05T12:00:00+00:00 [queued]>
+[2025-03-30T11:12:21.557+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2025-03-30T11:12:21.566+0000] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): ingest_dummy_data> on 2024-10-05 12:00:00+00:00
+[2025-03-30T11:12:21.571+0000] {standard_task_runner.py:60} INFO - Started process 1350 to run task
+[2025-03-30T11:12:21.582+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'inout_data_ingestion', 'ingest_dummy_data', 'scheduled__2024-10-05T12:00:00+00:00', '--job-id', '650', '--raw', '--subdir', 'DAGS_FOLDER/inout_data.py', '--cfg-path', '/tmp/tmpcyj64u0l']
+[2025-03-30T11:12:21.584+0000] {standard_task_runner.py:88} INFO - Job 650: Subtask ingest_dummy_data
+[2025-03-30T11:12:21.596+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-03-30T11:12:21.627+0000] {task_command.py:423} INFO - Running <TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-05T12:00:00+00:00 [running]> on host ff9d64b065e6
+[2025-03-30T11:12:21.687+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='inout_data_ingestion' AIRFLOW_CTX_TASK_ID='ingest_dummy_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-05T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-05T12:00:00+00:00'
+[2025-03-30T11:12:21.691+0000] {inout_data.py:42} INFO - Successfully connected to MariaDB: INOUT on mariadb:3306
+[2025-03-30T11:12:21.692+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:12:21-6762' for key 'PRIMARY'")
+[2025-03-30T11:12:21.693+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:12:21-6762' for key 'PRIMARY'")
+[2025-03-30T11:12:21.694+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:12:21-6762' for key 'PRIMARY'")
+[2025-03-30T11:12:21.694+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:12:21-6762' for key 'PRIMARY'")
+[2025-03-30T11:12:21.695+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:12:21-6762' for key 'PRIMARY'")
+[2025-03-30T11:12:21.695+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:12:21-6762' for key 'PRIMARY'")
+[2025-03-30T11:12:21.695+0000] {inout_data.py:159} INFO - Ingested 7 rows of dummy data.
+[2025-03-30T11:12:21.696+0000] {inout_data.py:78} INFO - MariaDB connection closed.
+[2025-03-30T11:12:21.696+0000] {python.py:202} INFO - Done. Returned value was: None
+[2025-03-30T11:12:21.702+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=inout_data_ingestion, task_id=ingest_dummy_data, execution_date=20241005T120000, start_date=20250330T111221, end_date=20250330T111221
+[2025-03-30T11:12:21.721+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-03-30T11:12:21.742+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-30T11:18:59.648+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-05T12:00:00+00:00 [queued]>
+[2025-03-30T11:18:59.674+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-05T12:00:00+00:00 [queued]>
+[2025-03-30T11:18:59.677+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2025-03-30T11:18:59.701+0000] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): ingest_dummy_data> on 2024-10-05 12:00:00+00:00
+[2025-03-30T11:18:59.712+0000] {standard_task_runner.py:60} INFO - Started process 3210 to run task
+[2025-03-30T11:18:59.745+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'inout_data_ingestion', 'ingest_dummy_data', 'scheduled__2024-10-05T12:00:00+00:00', '--job-id', '1579', '--raw', '--subdir', 'DAGS_FOLDER/inout_data.py', '--cfg-path', '/tmp/tmpvspzuxs_']
+[2025-03-30T11:18:59.756+0000] {standard_task_runner.py:88} INFO - Job 1579: Subtask ingest_dummy_data
+[2025-03-30T11:18:59.826+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-03-30T11:18:59.913+0000] {task_command.py:423} INFO - Running <TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-05T12:00:00+00:00 [running]> on host ff9d64b065e6
+[2025-03-30T11:19:00.087+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='inout_data_ingestion' AIRFLOW_CTX_TASK_ID='ingest_dummy_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-05T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-05T12:00:00+00:00'
+[2025-03-30T11:19:00.100+0000] {inout_data.py:42} INFO - Successfully connected to MariaDB: INOUT on mariadb:3306
+[2025-03-30T11:19:00.104+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:00-9189' for key 'PRIMARY'")
+[2025-03-30T11:19:00.107+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:00-9189' for key 'PRIMARY'")
+[2025-03-30T11:19:00.109+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:00-9189' for key 'PRIMARY'")
+[2025-03-30T11:19:00.111+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:00-9189' for key 'PRIMARY'")
+[2025-03-30T11:19:00.113+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:00-9189' for key 'PRIMARY'")
+[2025-03-30T11:19:00.115+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:00-9189' for key 'PRIMARY'")
+[2025-03-30T11:19:00.116+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:00-9189' for key 'PRIMARY'")
+[2025-03-30T11:19:00.117+0000] {inout_data.py:63} ERROR - Error executing query: (1062, "Duplicate entry '2025-03-30 11:19:00-9189' for key 'PRIMARY'")
+[2025-03-30T11:19:00.118+0000] {inout_data.py:152} INFO - Ingested 9 rows of dummy data.
+[2025-03-30T11:19:00.118+0000] {inout_data.py:78} INFO - MariaDB connection closed.
+[2025-03-30T11:19:00.119+0000] {python.py:202} INFO - Done. Returned value was: None
+[2025-03-30T11:19:00.127+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=inout_data_ingestion, task_id=ingest_dummy_data, execution_date=20241005T120000, start_date=20250330T111859, end_date=20250330T111900
+[2025-03-30T11:19:00.188+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-03-30T11:19:00.228+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-30T11:31:09.712+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-05T12:00:00+00:00 [queued]>
+[2025-03-30T11:31:09.719+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-05T12:00:00+00:00 [queued]>
+[2025-03-30T11:31:09.720+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2025-03-30T11:31:09.733+0000] {taskinstance.py:2214} INFO - Executing <Task(PythonOperator): ingest_dummy_data> on 2024-10-05 12:00:00+00:00
+[2025-03-30T11:31:09.736+0000] {standard_task_runner.py:60} INFO - Started process 5128 to run task
+[2025-03-30T11:31:09.740+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'inout_data_ingestion', 'ingest_dummy_data', 'scheduled__2024-10-05T12:00:00+00:00', '--job-id', '2539', '--raw', '--subdir', 'DAGS_FOLDER/inout_data.py', '--cfg-path', '/tmp/tmpfcko109l']
+[2025-03-30T11:31:09.741+0000] {standard_task_runner.py:88} INFO - Job 2539: Subtask ingest_dummy_data
+[2025-03-30T11:31:09.749+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2025-03-30T11:31:09.777+0000] {task_command.py:423} INFO - Running <TaskInstance: inout_data_ingestion.ingest_dummy_data scheduled__2024-10-05T12:00:00+00:00 [running]> on host ff9d64b065e6
+[2025-03-30T11:31:09.837+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='inout_data_ingestion' AIRFLOW_CTX_TASK_ID='ingest_dummy_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-05T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-05T12:00:00+00:00'
+[2025-03-30T11:31:09.844+0000] {logging_mixin.py:188} INFO - Successfully connected to MariaDB: INOUT on mariadb:3306
+[2025-03-30T11:31:09.844+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:31:09.845+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:31:09.845+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:31:09.845+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:31:09.845+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:31:09.845+0000] {logging_mixin.py:188} INFO - General error executing query: not all arguments converted during string formatting
+[2025-03-30T11:31:09.846+0000] {inout_data.py:87} INFO - Ingested 6 rows of dummy data for 2024-10-05 12:00:00+00:00.
+[2025-03-30T11:31:09.847+0000] {logging_mixin.py:188} INFO - MariaDB connection closed.
+[2025-03-30T11:31:09.847+0000] {python.py:202} INFO - Done. Returned value was: None
+[2025-03-30T11:31:09.854+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=inout_data_ingestion, task_id=ingest_dummy_data, execution_date=20241005T120000, start_date=20250330T113109, end_date=20250330T113109
+[2025-03-30T11:31:09.880+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-03-30T11:31:09.890+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check
