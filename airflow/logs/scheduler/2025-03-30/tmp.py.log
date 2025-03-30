@@ -7764,3 +7764,10 @@ ValueError: Connection ID 'my_mariadb' not found in configuration file.
 [2025-03-30T12:26:35.851+0000] {logging_mixin.py:188} INFO - [2025-03-30T12:26:35.851+0000] {tmp.py:108} ERROR - Failed to connect to MariaDB or other error: Connection ID 'my_mariadb' not found in configuration file.
 [2025-03-30T12:26:35.851+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tmp.py
 [2025-03-30T12:26:35.867+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tmp.py took 0.064 seconds
+[2025-03-30T12:27:06.264+0000] {processor.py:161} INFO - Started process (PID=3216) to work on /opt/airflow/dags/tmp.py
+[2025-03-30T12:27:06.268+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/tmp.py for tasks to queue
+[2025-03-30T12:27:06.273+0000] {logging_mixin.py:188} INFO - [2025-03-30T12:27:06.272+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/tmp.py
+[2025-03-30T12:27:06.280+0000] {logging_mixin.py:188} INFO - [2025-03-30T12:27:06.280+0000] {tmp.py:49} ERROR - Failed to connect to MariaDB or other error: Connection ID 'my_mariadb' not found in configuration file.
+[2025-03-30T12:27:06.281+0000] {logging_mixin.py:188} INFO - [2025-03-30T12:27:06.280+0000] {tmp.py:108} ERROR - Failed to connect to MariaDB or other error: Connection ID 'my_mariadb' not found in configuration file.
+[2025-03-30T12:27:06.281+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/tmp.py
+[2025-03-30T12:27:06.312+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/tmp.py took 0.060 seconds
