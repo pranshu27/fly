@@ -8,3 +8,8 @@ WebUI: http://192.168.0.175:59700 http://127.0.0.1:59700
 
 Docs: https://docs.min.io
 WARN: Detected default credentials 'minioadmin:minioadmin', we recommend that you change these values with 'MINIO_ROOT_USER' and 'MINIO_ROOT_PASSWORD' environment variables
+INFO: listAllIAMConfigItems took 6.73s with contents:
+    sts/: 1 items
+
+INFO: IAM refresh took (duration: 6.78s)
+INFO: Exiting on signal: TERMINATED

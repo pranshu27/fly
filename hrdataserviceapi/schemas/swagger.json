@@ -1,0 +1,50 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Employee Entrance API",
+      "version": "1.0.0",
+      "description": "API to retrieve employee first entrance time"
+    },
+    "paths": {
+      "/post/get_employee_entrance_first_in": {
+        "post": {
+          "summary": "Get employee's first entrance time",
+          "consumes": ["application/json"],
+          "produces": ["application/json"],
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "description": "Employee ID and date",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "employee_id": { "type": "integer" },
+                  "date": { "type": "string", "format": "date" }
+                },
+                "required": ["employee_id", "date"]
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful operation",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "first_entrance": { "type": "string", "format": "date-time" }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request"
+            },
+            "404": {
+              "description": "No records found"
+            }
+          }
+        }
+      }
+    }
+  }
